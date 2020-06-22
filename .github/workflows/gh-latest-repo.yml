@@ -1,0 +1,19 @@
+name: ON_PUSH
+
+on:
+  schedule:
+    - cron: '*/60 * * * *'
+
+jobs:
+  GH_Latest_Repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📩 Fetching Repository
+        uses: actions/checkout@v2
+      - name: 📝 Generating JSON
+        uses: varunsridharan/action-gh-latest-repo@master
+        with:
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
+          GITHUB_USERNAME: "surjithctly"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
