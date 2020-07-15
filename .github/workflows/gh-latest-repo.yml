@@ -1,8 +1,8 @@
 name: ON_PUSH
 
 on:
-  schedule:
-    - cron: '*/60 * * * *'
+  # schedule:
+  #  - cron: '*/60 * * * *'
   push:
     branches:
       - master
