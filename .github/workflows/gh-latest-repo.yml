@@ -14,7 +14,7 @@ jobs:
       - name: 📩 Fetching Repository
         uses: actions/checkout@v2
       - name: 📝 Generating JSON
-        uses: varunsridharan/action-gh-latest-repo@master
+        uses: varunsridharan/action-gh-latest-repo@main
         with:
           GH_TOKEN: ${{secrets.GH_TOKEN}}
           GITHUB_USERNAME: "surjithctly"
